@@ -1,0 +1,476 @@
+// main: main.scss
+// out: false
+//? 'phone': 576px,
+//? 'tablet': 768px,
+//? 'tablet2':  992px,
+//? 'desktop': 1024px,
+//? 'largescreen': 1200px,
+//? 'macbookpro': 1440px
+
+// @include media(">=phone") {}
+// @include media(">=tablet") {}
+// @include media(">=tablet2") {}
+// @include media(">=desktop") {}
+// @include media(">=largescreen") {}
+
+//?#################################
+
+//INFO IMG Module
+
+//?#################################
+
+//?#############################################
+
+//INFO Typo Module
+
+//INFO LINKS
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: $highlightColor;
+  @include transition(all 0.3s);
+  &:hover,
+  &:focus {
+    color: $textColor3;
+    text-decoration: none;
+  }
+}
+
+// //?###############################
+
+.align-self-start {
+  align-self: start;
+}
+.align-self-end {
+  align-self: end;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+.bg-1 {
+  background-color: $bgColor;
+}
+.bg-2 {
+  background-color: $bgColor2;
+}
+.bg-3 {
+  background-color: $bgColor3;
+}
+.bg-4 {
+  background-color: $bgColor4;
+}
+.bg-primaryColor {
+  background-color: $primaryColor;
+  color: $textColor3;
+}
+
+.bg-2 .bg-2 {
+  background-color: $bgColor;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.space-0 {
+  margin: 0 !important;
+}
+.innerspace-0 {
+  padding: 0 !important;
+}
+
+.border_top {
+  border-top: 1px solid $borderColor;
+}
+.border_bottom {
+  border-bottom: 1px solid $borderColor;
+}
+.border_top_2 {
+  border-top: 1px solid $borderColor2;
+}
+.border_bottom_2 {
+  border-bottom: 1px solid $borderColor2;
+}
+.border_top_light {
+  border-top: 1px solid $borderColorLight;
+}
+.border_bottom_light {
+  border-bottom: 1px solid $borderColorLight;
+}
+.border {
+  border: 2px solid $textColor;
+}
+
+.regular {
+  font-weight: 400 !important;
+}
+.medium {
+  font-weight: 500 !important;
+}
+.semibold {
+  font-weight: 600 !important;
+}
+.bold {
+  font-weight: 700 !important;
+}
+.thin {
+  font-weight: 100 !important;
+}
+.extralight {
+  font-weight: 200 !important;
+}
+.light {
+  font-weight: 300 !important;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-justify {
+  text-align: justify;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.h-100 {
+  height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100vh {
+  height: 100vh;
+}
+.w-100vw {
+  width: 100vw;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.h-min-100 {
+  min-height: 100%;
+}
+.w-min-100 {
+  min-width: 100%;
+}
+.h-min-100vh {
+  min-height: 100vh;
+}
+.w-min-100vw {
+  min-width: 100vw;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.color-highlight {
+  color: $highlightColor !important;
+}
+.color-grey {
+  color: $textColor4 !important;
+}
+.color-2 {
+  color: $textColor2 !important;
+}
+
+.box-shadow {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cover {
+  @include cover-background;
+}
+
+.onlyTabletDesktop {
+  display: none;
+  @include media('>=tablet2') {
+    display: block;
+  }
+}
+.onlyMobil {
+  display: block;
+  @include media('>=tablet2') {
+    display: none;
+  }
+}
+
+//INFO typo3 klassensystem
+.space- {
+  $extra-small: 6px;
+  $small: 10px;
+  $medium: 20px;
+  $large: 40px;
+  $extra-large: 90px;
+
+  // &before-extra-extra-small{margin-top:$extra-extra-small !important;}
+  &before-extra-small {
+    margin-top: $extra-small !important;
+  }
+  &before-small {
+    margin-top: $small !important;
+  }
+  &before-medium {
+    margin-top: $medium !important;
+  }
+  &before-large {
+    margin-top: $large !important;
+  }
+  &before-extra-large {
+    margin-top: $extra-large !important;
+  }
+  // &before-extra-extra-large{margin-top:$extra-extra-large !important;}
+
+  // &after-extra-extra-small{margin-bottom:$extra-extra-small !important;}
+  &after-extra-small {
+    margin-bottom: $extra-small !important;
+  }
+  &after-small {
+    margin-bottom: $small !important;
+  }
+  &after-medium {
+    margin-bottom: $medium !important;
+  }
+  &after-large {
+    margin-bottom: $large !important;
+  }
+  &after-extra-large {
+    margin-bottom: $extra-large !important;
+  }
+  // &after-extra-extra-large{margin-bottom:$extra-extra-large !important;}
+
+  @include media('>=desktop') {
+    $extra-small: 10px;
+    $small: 20px;
+    $medium: 40px;
+    $large: 90px;
+    $extra-large: 160px;
+
+    // &before-extra-extra-small{margin-top:$extra-extra-small !important;}
+    &before-extra-small {
+      margin-top: $extra-small !important;
+    }
+    &before-small {
+      margin-top: $small !important;
+    }
+    &before-medium {
+      margin-top: $medium !important;
+    }
+    &before-large {
+      margin-top: $large !important;
+    }
+    &before-extra-large {
+      margin-top: $extra-large !important;
+    }
+    // &before-extra-extra-large{margin-top:$extra-extra-large !important;}
+
+    // &after-extra-extra-small{margin-bottom:$extra-extra-small !important;}
+    &after-extra-small {
+      margin-bottom: $extra-small !important;
+    }
+    &after-small {
+      margin-bottom: $small !important;
+    }
+    &after-medium {
+      margin-bottom: $medium !important;
+    }
+    &after-large {
+      margin-bottom: $large !important;
+    }
+    &after-extra-large {
+      margin-bottom: $extra-large !important;
+    }
+    // &after-extra-extra-large{margin-bottom:$extra-extra-large !important;}
+  }
+}
+
+.innerspace- {
+  $extra-small: 6px;
+  $small: 10px;
+  $medium: 20px;
+  $large: 40px;
+  $extra-large: 90px;
+
+  &before-extra-small {
+    padding-top: $extra-small !important;
+  }
+  &before-small {
+    padding-top: $small !important;
+  }
+  &before-medium {
+    padding-top: $medium !important;
+  }
+  &before-large {
+    padding-top: $large !important;
+  }
+  &before-extra-large {
+    padding-top: $extra-large !important;
+  }
+
+  &after-extra-small {
+    padding-bottom: $extra-small !important;
+  }
+  &after-small {
+    padding-bottom: $small !important;
+  }
+  &after-medium {
+    padding-bottom: $medium !important;
+  }
+  &after-large {
+    padding-bottom: $large !important;
+  }
+  &after-extra-large {
+    padding-bottom: $extra-large !important;
+  }
+
+  &before-after-extra-small {
+    padding-top: $extra-small !important;
+    padding-bottom: $extra-small !important;
+  }
+  &before-after-small {
+    padding-top: $small !important;
+    padding-bottom: $small !important;
+  }
+  &before-after-medium {
+    padding-top: $medium !important;
+    padding-bottom: $medium !important;
+  }
+  &before-after-large {
+    padding-top: $large !important;
+    padding-bottom: $large !important;
+  }
+  &before-after-extra-large {
+    padding-top: $extra-large !important;
+    padding-bottom: $extra-large !important;
+  }
+
+  @include media('>=desktop') {
+    $extra-small: 10px;
+    $small: 20px;
+    $medium: 40px;
+    $large: 90px;
+    $extra-large: 160px;
+
+    &before-extra-small {
+      padding-top: $extra-small !important;
+    }
+    &before-small {
+      padding-top: $small !important;
+    }
+    &before-medium {
+      padding-top: $medium !important;
+    }
+    &before-large {
+      padding-top: $large !important;
+    }
+    &before-extra-large {
+      padding-top: $extra-large !important;
+    }
+    // &before-extra-x-large{padding-top:$extra-x-large;}
+
+    &after-extra-small {
+      padding-bottom: $extra-small !important;
+    }
+    &after-small {
+      padding-bottom: $small !important;
+    }
+    &after-medium {
+      padding-bottom: $medium !important;
+    }
+    &after-large {
+      padding-bottom: $large !important;
+    }
+    &after-extra-large {
+      padding-bottom: $extra-large !important;
+    }
+
+    &before-after-extra-small {
+      padding-top: $extra-small !important;
+      padding-bottom: $extra-small !important;
+    }
+    &before-after-small {
+      padding-top: $small !important;
+      padding-bottom: $small !important;
+    }
+    &before-after-medium {
+      padding-top: $medium !important;
+      padding-bottom: $medium !important;
+    }
+    &before-after-large {
+      padding-top: $large !important;
+      padding-bottom: $large !important;
+    }
+    &before-after-extra-large {
+      padding-top: $extra-large !important;
+      padding-bottom: $extra-large !important;
+    }
+  }
+}
+
+//?#############################################
+//?#############################################
+//INFO Dev Module
+
+//INFO Gridtester
+// #gridtester{
+//   position: fixed;
+//   z-index: 777777;
+//   pointer-events: none;
+//   height:100vh;
+//   width:100%;
+//   // display:none;
+
+//   .col{
+//     &:before{
+//       display:block;
+//       content:'';
+//       height:100%;
+//       width:100%;
+//       background:rgba(13, 241, 89, 0.05);
+//     }
+
+//   }
+// }

@@ -1,0 +1,31 @@
+// out: ../pages/globals.css, compress: true, sourceMap: true
+
+@import '_vars';
+@import '_include-media';
+@import '_transitions';
+@import '_mixins';
+@import '_keyframes';
+
+//?###################
+
+// @import "_normalize";
+
+@import '_base';
+@import '_module';
+
+//?#######
+
+//? 'phone': 576px,
+//? 'tablet': 768px,
+//? 'tablet2':  992px,
+//? 'desktop': 1024px,
+//? 'largescreen': 1200px,
+//? 'macbookpro': 1440px
+
+// @include media(">=phone") {}
+// @include media(">=tablet") {}
+// @include media(">=tablet2") {}
+// @include media(">=desktop") {}
+// @include media(">=largescreen") {}
+
+//?####################

@@ -8,6 +8,7 @@ module.exports = {
     '@storybook/addon-interactions',
     'storybook-css-modules-preset',
     'storybook-addon-next-router',
+    '@storybook/preset-scss',
     {
       /**
        * Fix Storybook issue with PostCSS@8
