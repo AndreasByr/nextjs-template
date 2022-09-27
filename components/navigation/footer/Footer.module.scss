@@ -1,6 +1,11 @@
-// out: true, compress: true, sourceMap: false
+// out: false, compress: true, sourceMap: false
 
 @import '../../../scss/_vars';
 @import '../../../scss/_include-media';
 @import '../../../scss/_transitions';
 @import '../../../scss/_mixins';
+
+
+.component {
+    
+}

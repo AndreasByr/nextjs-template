@@ -47,107 +47,6 @@ body{
     @include font-size-default;
 }
 
-//INFO Header
-
-header#header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: $bgColor;
-    @include transition(all .3s);
-    @include transition(box-shadow 0s);
-    border-bottom: 4px solid $borderColorLight;
-    .inner-header{
-
-        @include transition(all .3s);
-        display: grid;
-        grid-template-columns: auto auto;
-        column-gap: 20px;
-        position: relative;
-
-        @include media(">=phone"){
-        }
-        @include media(">=desktop") {
-        }
-        @include media(">=macbookpro") {
-        }
-
-        .logo-holder{
-            width: 250px;
-            padding: 20px 0px;
-            position: relative;
-      
-            @include transition(all .3s);
-            @include media(">=tablet2") {
-
-            }
-            @include media(">=desktop") {
-
-            }
-
-            .logo{
-                display: block;
-                img{
-                    width: 100%;
-                }
-            }
-        }
-
-        .nav-holder{
-            position: relative;
-        }
-        
-    }
-    
-    &.scroll-up{
-        &#header{
-
-        }
-
-        .inner-header{
-
-            @include media(">=desktop") {
-
-
-            }
-   
-        }
-
-    }
-} 
-
-
-//INFO footer
-footer#footer {
-    background-color: $bgColor2;
-    color: $textColor2;
-    padding: 30px 0px 30px;
-    h5{
-        color: $textColor2;
-    }
-    a{
-        color: $textColor2;
-        text-decoration: none;
-    }
-    @include media(">=tablet") {
-
-    }
-    @include media(">=tablet2") {
-
-    }
-}
-//INFO content
-  
-main#content{
-    position: relative;
-    padding-top: 120px;
-    @include media(">=desktop") {
-
-    }
-}
 
 
 //?#############################
@@ -359,17 +258,17 @@ a{
     }
 }
 
-.btn, button{
-    border: 1px solid $highlightColor;
-    color: $textColor2;
+button{
+    border: none;
+    color: $textColor;
     display: inline-block;
     padding: 10px 20px;
-    background-color: $highlightColor;
+    background-color: transparent;
     text-decoration: none;
     @include transition(all .3s);
     &:hover{
-        color: $highlightColor;
-        background-color: $textColor2;
+        color: $textColor;
+        background-color: transparent;
     }
 }
 

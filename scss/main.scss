@@ -1,4 +1,4 @@
-// out: ../pages/globals.css, compress: true, sourceMap: true
+// out: false, compress: true, sourceMap: true
 
 @import '_vars';
 @import '_include-media';
@@ -29,3 +29,20 @@
 // @include media(">=largescreen") {}
 
 //?####################
+
+
+//INFO Header
+
+header#header{ 
+}
+    
+
+
+//INFO footer
+footer#footer {
+}
+//INFO content
+  
+main#content{
+   position: relative;
+}
