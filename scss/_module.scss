@@ -1,4 +1,4 @@
-// main: main.scss
+// main: globals.scss
 // out: false
 //? 'phone': 576px,
 //? 'tablet': 768px,
@@ -37,17 +37,17 @@
   }
 }
 
-.btn{
+.btn {
   border: 1px solid $highlightColor;
   color: $textColor2;
   display: inline-block;
   padding: 10px 20px;
   background-color: $highlightColor;
   text-decoration: none;
-  @include transition(all .3s);
-  &:hover{
-      color: $highlightColor;
-      background-color: $textColor2;
+  @include transition(all 0.3s);
+  &:hover {
+    color: $highlightColor;
+    background-color: $textColor2;
   }
 }
 

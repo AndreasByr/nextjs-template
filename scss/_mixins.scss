@@ -1,15 +1,13 @@
-// main: main.scss
+// main: globals.scss
 // out: false
 
-
-@mixin font-size ($size : 16)
-{
-    $sizeRem: ($size / 10) - ( ( ($size /10 ) * 37.5) /100 );
-    font-size: $size + px;
-    font-size: $sizeRem + rem;
+@mixin font-size($size: 16) {
+  $sizeRem: ($size / 10) - ((($size / 10) * 37.5) /100);
+  font-size: $size + px;
+  font-size: $sizeRem + rem;
 }
 
-@mixin transform ($transform){
+@mixin transform($transform) {
   -webkit-transform: $transform;
   -moz-transform: $transform;
   -ms-transform: $transform;
@@ -17,11 +15,10 @@
   transform: $transform;
 }
 
-
 @mixin cover-background {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 // /* ===== Usage ===== */
 //div {
@@ -30,27 +27,27 @@
 //}
 
 @mixin box-sizing {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @mixin list-reset {
-    margin: 0;
-    padding: 0;
-    list-style: none outside;
+  margin: 0;
+  padding: 0;
+  list-style: none outside;
 }
 
 @mixin clearfix() {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    height: 0;
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
 }
 
 @mixin box($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 // /* ===== Usage ===== */
 //div {
@@ -65,7 +62,7 @@
   $height: 100%,
   $display: inline-block,
   $pos: absolute,
-  $content: ""
+  $content: ''
 ) {
   content: $content;
   display: $display;
@@ -83,13 +80,22 @@
 //    }
 // }
 
-
 @mixin input-placeholder {
-    &.placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; }
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
 }
 // /* ===== Usage ===== */
 //input,
@@ -99,103 +105,97 @@
 //    }
 //}
 
-
 // 2 - Hide and Show Element with Transition
 // -------------------------------------------
 //
 @mixin fade($type) {
-    @if $type == 'hide' {
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 1s, opacity 1s;
-    }
-    @else if $type == 'show' {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 1s, opacity 1s;
-    }
-
+  @if $type == 'hide' {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+  } @else if $type == 'show' {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s;
+  }
 }
 
-
 // absolut center
-@mixin center($p : "") {
+@mixin center($p: '') {
   position: absolute;
-  @if $p == "y" {
+  @if $p == 'y' {
     top: 50%;
     @include transform(translateY(-50%));
-  }
-  @else if  $p == "x" {
+  } @else if $p == 'x' {
     left: 50%;
     @include transform(translateX(-50%));
-  }
-  @else{
+  } @else {
     top: 50%;
     left: 50%;
     @include transform(translate(-50%, -50%));
   }
 }
 
-@mixin content($justify: "", $align: "") {
+@mixin content($justify: '', $align: '') {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 
-  @if $justify == "start" {
+  @if $justify == 'start' {
     -webkit-box-pack: start !important;
     -webkit-justify-content: flex-start !important;
     -ms-flex-pack: start !important;
     justify-content: flex-start !important;
-  }@else if $justify == "end"{
+  } @else if $justify == 'end' {
     -webkit-box-pack: end !important;
     -webkit-justify-content: flex-end !important;
     -ms-flex-pack: end !important;
     justify-content: flex-end !important;
-  }@else if $justify == "center"{
+  } @else if $justify == 'center' {
     -webkit-box-pack: center !important;
     -webkit-justify-content: center !important;
     -ms-flex-pack: center !important;
     justify-content: center !important;
-  }@else if $justify == "between"{
+  } @else if $justify == 'between' {
     -webkit-box-pack: justify !important;
     -webkit-justify-content: space-between !important;
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
-  }@else if $justify == "around"{
+  } @else if $justify == 'around' {
     -webkit-justify-content: space-around !important;
     -ms-flex-pack: distribute !important;
     justify-content: space-around !important;
-  }@else if $justify == "evenly"{
+  } @else if $justify == 'evenly' {
     -webkit-box-pack: space-evenly !important;
     -webkit-justify-content: space-evenly !important;
     -ms-flex-pack: space-evenly !important;
     justify-content: space-evenly !important;
   }
 
-  @if $align != ""{
+  @if $align != '' {
     -webkit-flex-wrap: wrap !important;
     -ms-flex-wrap: wrap !important;
     flex-wrap: wrap !important;
   }
 
-  @if $align == "start" {
+  @if $align == 'start' {
     -webkit-align-content: flex-start !important;
     -ms-flex-line-pack: start !important;
     align-content: flex-start !important;
-  }@else if $align == "end" {
+  } @else if $align == 'end' {
     -webkit-align-content: flex-end !important;
     -ms-flex-line-pack: end !important;
     align-content: flex-end !important;
-  }@else if $align == "center" {
+  } @else if $align == 'center' {
     -webkit-align-content: center !important;
     -ms-flex-line-pack: center !important;
     align-content: center !important;
-  }@else if $align == "around" {
+  } @else if $align == 'around' {
     -webkit-align-content: space-around !important;
     -ms-flex-line-pack: distribute !important;
     align-content: space-around !important;
-  }@else if $align == "stretch" {
+  } @else if $align == 'stretch' {
     -webkit-align-content: stretch !important;
     -ms-flex-line-pack: stretch !important;
     align-content: stretch !important;

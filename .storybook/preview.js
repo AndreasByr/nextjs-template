@@ -1,7 +1,7 @@
 // @ts-check
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as NextImage from 'next/image';
-import '../scss/main.scss';
+import '../scss/globals.scss';
 // import { AuthProvider } from '../state/auth/AuthContext';
 
 const BREAKPOINTS_INT = {

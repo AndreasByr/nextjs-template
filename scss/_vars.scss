@@ -1,4 +1,4 @@
-// main: main.scss
+// main: globals.scss
 // out: false
 
 $fontStack: ('', Arial, sans-serif);
@@ -7,9 +7,9 @@ $fontStack: ('', Arial, sans-serif);
 $primaryColor: #313638;
 // $primaryColorDark: #000;
 
-$textColor: #313638; 
+$textColor: #313638;
 $textColor2: #ffffff;
-$textColor3:  #0059be;
+$textColor3: #0059be;
 $textColor4: #505f66;
 
 $highlightColor: #0059be;
@@ -19,10 +19,10 @@ $highlightColor: #0059be;
 // $bgColorTheme3: #dcd89b;
 // $bgColorTheme2: #3F334D;
 
-$bgColor: #FCFFFC;
+$bgColor: #fcfffc;
 $bgColor2: #313638;
 $bgColor3: #0059be;
-$bgColor4:#fff;
+$bgColor4: #fff;
 $bgColor5: #fff;
 
 $borderColor: #313638;
@@ -35,51 +35,42 @@ $grey: #505f66;
 // $languagesNormalColorState: #beb0b0;
 // $fusszeileNormalColorState: #b2a6a6;
 // $hrColor: #f7f0ec;
-$placeholderColor:#b3b3b3;
+$placeholderColor: #b3b3b3;
 // $toTop: #cfc6c1;
 
-
 $breakpoints: (
-    'phone': 576px,
-    'tablet': 768px,
-    'tablet2': 992px,
-    'desktop': 1024px,
-    'largescreen': 1200px,
-    'macbookpro': 1440px
+  'phone': 576px,
+  'tablet': 768px,
+  'tablet2': 992px,
+  'desktop': 1024px,
+  'largescreen': 1200px,
+  'macbookpro': 1440px,
 );
 
 :root {
-
 }
 
-@media (min-width: 576px) { 
-    :root {
-
-    }
+@media (min-width: 576px) {
+  :root {
+  }
 }
-@media (min-width: 768px) { 
-    :root {
-
-    }
+@media (min-width: 768px) {
+  :root {
+  }
 }
-@media (min-width: 992px) { 
-    :root {
-
-    }
+@media (min-width: 992px) {
+  :root {
+  }
 }
-@media (min-width: 1024px) { 
-    :root {
-
-    }
+@media (min-width: 1024px) {
+  :root {
+  }
 }
-@media (min-width: 1200px) { 
-    :root {
-
-    }
+@media (min-width: 1200px) {
+  :root {
+  }
 }
-@media (min-width: 1440px) { 
-    :root {
-
-    }
+@media (min-width: 1440px) {
+  :root {
+  }
 }
-
